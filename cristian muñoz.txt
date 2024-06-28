@@ -1,0 +1,23 @@
+try:
+    notebooks_entragados={}
+    def entregar_notebooks(persona):
+        nombre=input("ingrese su nombre\n ")
+        rut=input("ingrese su rut sin puntos ni guion\n ")
+        if len(notebooks_entragados)< 30:
+            notebooks_entragados[persona] =True
+            print(f"se entrego un notebooks a {persona}")
+        else:
+            print("ya se an entregado todos los notebooks")
+    def devolver_notebooks(persona):
+        if persona in notebooks_entragados:
+            del notebooks_entragados[persona]
+            print(f"{persona} a devuelto el notebooks")
+        else:
+            print(f"{persona} no tiene notebooks registrado")
+    entregar_notebooks("persona1")
+    entregar_notebooks("persona2")
+    entregar_notebooks("persona3")
+except:
+    print("error mamahuevaso")
+finally:
+    print("ye rraa finnnnn")
